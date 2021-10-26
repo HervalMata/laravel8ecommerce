@@ -1,4 +1,4 @@
-<x-guest-layout>
+{{--<x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
             <x-jet-authentication-card-logo />
@@ -57,4 +57,61 @@
             </div>
         </form>
     </x-jet-authentication-card>
+</x-guest-layout>--}}
+
+<x-guest-layout>
+    <!--main area-->
+    <main id="main" class="main-site left-sidebar">
+
+        <div class="container">
+
+            <div class="wrap-breadcrumb">
+                <ul>
+                    <li class="item-link"><a href="/" class="link">home</a></li>
+                    <li class="item-link"><span>Cadastrar</span></li>
+                </ul>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12 col-md-offset-3">
+                    <div class=" main-content-area">
+                        <div class="wrap-login-item ">
+                            <div class="register-form form-item ">
+                                <x-jet-validation-errors class="mb-4" />
+                                <form class="form-stl" action="{{ route('register') }}" name="frm-login" method="POST" >
+                                    @csrf
+                                    <fieldset class="wrap-title">
+                                        <h3 class="form-title">Criar uma conta</h3>
+                                        <h4 class="form-subtitle">Dados Pessoais</h4>
+                                    </fieldset>
+                                    <fieldset class="wrap-input">
+                                        <label for="frm-reg-lname">Nome*</label>
+                                        <input type="text" id="frm-reg-lname" name="name" :value="name" placeholder="Seu Nome*" required autofocus autocomplete="name">
+                                    </fieldset>
+                                    <fieldset class="wrap-input">
+                                        <label for="frm-reg-email">Email*</label>
+                                        <input type="email" id="frm-reg-email" name="email" :value="email" placeholder="Email">
+                                    </fieldset>
+                                    <fieldset class="wrap-title">
+                                        <h3 class="form-title">Dados para Login</h3>
+                                    </fieldset>
+                                    <fieldset class="wrap-input item-width-in-half left-item ">
+                                        <label for="frm-reg-pass">Senha *</label>
+                                        <input type="password" id="frm-reg-pass" name="password" placeholder="Senha" required autocomplete="new-password">
+                                    </fieldset>
+                                    <fieldset class="wrap-input item-width-in-half ">
+                                        <label for="frm-reg-cfpass">Confirme a senha *</label>
+                                        <input type="password" id="frm-reg-cfpass" name="password_confirmation" placeholder="Confirme a senha" required autocomplete="new-password">
+                                    </fieldset>
+                                    <input type="submit" class="btn btn-sign" value="Cadastrar" name="register">
+                                </form>
+                            </div>
+                        </div>
+                    </div><!--end main products area-->
+                </div>
+            </div><!--end row-->
+
+        </div><!--end container-->
+
+    </main>
+    <!--main area-->
 </x-guest-layout>

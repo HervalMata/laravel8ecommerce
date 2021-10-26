@@ -43,8 +43,8 @@
                     </div>
                     <div class="topbar-menu right-menu">
                         <ul>
-                            <li class="menu-item" ><a title="Cadastre-se ou Login" href="{{route('login')}}">Login</a></li>
-                            <li class="menu-item" ><a title="Cadastre-se ou Login" href="{{route('register')}}">Cadastro</a></li>
+                            {{--<li class="menu-item" ><a title="Cadastre-se ou Login" href="{{route('login')}}">Login</a></li>
+                            <li class="menu-item" ><a title="Cadastre-se ou Login" href="{{route('register')}}">Cadastro</a></li>--}}
                             <li class="menu-item lang-menu menu-item-has-children parent">
                                 <a title="English" href="#"><span class="img label-before"><img src="{{ asset('assets/images/lang-en.png') }}" alt="lang-en"></span>English<i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                 <ul class="submenu lang" >
